@@ -1,0 +1,17 @@
+{
+  "name": "angular-simple-focus-on",
+  "version": "1.0.0",
+  "description":
+    "AngularJS directive and service to simplify the focus event with AngularJS framework.",
+  "main": "src/module.simple-focus-on.js",
+  "scripts": {
+    "docs":
+      "node_modules/.bin/javadoc -i src/module.simple-focus-on.js -o README.md -f markdown"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "javadoc": "^1.0.3"
+  }
+}

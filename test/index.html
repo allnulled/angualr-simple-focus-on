@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Simple-Focus-On example</title>
+  <script src="angular-v1.6.js"></script>
+  <script src="../src/module.simple-focus-on.js"></script>
+</head>
+
+<body>
+  <div ng-app="ExampleModule" ng-controller="ExampleController as exampleCtrl">
+    <h1>Simple-Focus-On example</h1>
+    <div>
+      <button ng-click="exampleCtrl.focus('unique identifier 1')">Focus on first input</button>
+    </div>
+    <div>
+      <button ng-click="exampleCtrl.focus('unique identifier 2')">Focus on second input</button>
+    </div>
+    <div>
+      <button ng-click="exampleCtrl.focus('unique identifier 3')">Focus on third input</button>
+    </div>
+    <div>
+      <input simple-focus-on-id="'unique identifier 1'" type="text" name="text1">
+    </div>
+    <div>
+      <input simple-focus-on-id="'unique identifier 2'" type="text" name="text1">
+    </div>
+    <div>
+      <input simple-focus-on-id="'unique identifier 3'" type="text" name="text1">
+    </div>
+  </div>
+  <script type="text/javascript">
+  	angular
+  		.module("ExampleModule", ["SimpleFocusOn"])
+  		.controller("ExampleController", ["SimpleFocusOnService", function(SimpleFocusOnService) {
+  			var ctrl = this;
+  			ctrl.focus = SimpleFocusOnService.focus;
+  		}]);
+  </script>
+</body>
+
+</html>
